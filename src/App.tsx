@@ -4,7 +4,7 @@ import QuestionMark from "./assets/question-mark-icon.png";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-dvh">
       <Drawer.Root>
         <Drawer.Trigger>
           <img src={QuestionMark} className="h-8 w-8 absolute top-2 right-2" />
