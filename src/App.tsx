@@ -1,15 +1,13 @@
 import GlitchText from "@/components/GlitchText";
 import { Drawer } from "vaul";
+import QuestionMark from "./assets/question-mark-icon.png";
 
 function App() {
   return (
     <div className="flex flex-col h-screen">
       <Drawer.Root>
         <Drawer.Trigger>
-          <img
-            src="/question-mark-icon.png"
-            className="h-8 w-8 absolute top-2 right-2"
-          />
+          <img src={QuestionMark} className="h-8 w-8 absolute top-2 right-2" />
         </Drawer.Trigger>
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 bg-black/40" />
