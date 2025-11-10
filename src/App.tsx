@@ -1,6 +1,6 @@
 import GlitchText from "@/components/GlitchText";
 import { Drawer } from "vaul";
-import QuestionMark from "./assets/question-mark-icon.png";
+import QuestionMark from "/question-mark-icon.png";
 
 function App() {
   return (
