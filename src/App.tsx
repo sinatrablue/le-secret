@@ -1,7 +1,10 @@
 import GlitchText from "@/components/GlitchText";
+import { useVisitor } from "@/hooks/useVisitor";
 import { Drawer } from "vaul";
 
 function App() {
+  const { visitorName } = useVisitor();
+
   return (
     <div className="flex flex-col h-dvh">
       <Drawer.Root>
@@ -33,9 +36,13 @@ function App() {
       <main className="flex flex-col max-sm:gap-16 md:gap-32 grow max-sm:px-8 md:max-w-3xl md:mx-auto md:my-10 max-sm:py-4">
         <h1 className="stack-sans-notch-h1 text-6xl">
           Bonjour{" "}
-          <GlitchText speed={1} enableShadows={true}>
-            [ non reconnu ]
-          </GlitchText>
+          {visitorName ? (
+            visitorName
+          ) : (
+            <GlitchText speed={1} enableShadows={true}>
+              [ non reconnu ]
+            </GlitchText>
+          )}
         </h1>
 
         <section className="max-sm:text-lg md:text-2xl">
