@@ -11,10 +11,10 @@ export const VISITORS = [
   "robin",
 ] as const;
 export const NAMES = [
-  "Dodo",
+  "Dodo de la tisane à Dodo",
   "Hellébore",
   "Aéla",
-  "Laure",
+  "La folle de SMLT",
   "Sonia",
   "Aliénor",
   "Léa",

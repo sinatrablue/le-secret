@@ -1,4 +1,5 @@
 import GlitchText from "@/components/GlitchText";
+import TextType from "@/components/TextType";
 import { useVisitor } from "@/hooks/useVisitor";
 import { Drawer } from "vaul";
 
@@ -35,9 +36,13 @@ function App() {
 
       <main className="flex flex-col max-sm:gap-16 md:gap-32 grow max-sm:px-8 md:max-w-3xl md:mx-auto md:my-10 max-sm:py-4">
         <h1 className="stack-sans-notch-h1 text-6xl">
-          Bonjour{" "}
+          Bonjour
+          <br />
           {visitorName ? (
-            visitorName
+            <TextType
+              text={visitorName}
+              typingSpeed={visitorName.length > 5 ? 80 : 160}
+            />
           ) : (
             <GlitchText speed={1} enableShadows={true}>
               [ non reconnu ]
