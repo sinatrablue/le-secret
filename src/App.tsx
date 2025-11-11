@@ -4,7 +4,7 @@ import { useVisitor } from "@/hooks/useVisitor";
 import { Drawer } from "vaul";
 
 function App() {
-  const { visitorName } = useVisitor();
+  const { visitorName, mainContent } = useVisitor();
 
   return (
     <div className="flex flex-col h-dvh">
@@ -50,10 +50,7 @@ function App() {
           )}
         </h1>
 
-        <section className="max-sm:text-lg md:text-2xl">
-          Aucune information n'est disponible pour le moment. Mais cela pourrait
-          venir à changer !
-        </section>
+        <section className="max-sm:text-lg md:text-2xl">{mainContent}</section>
       </main>
 
       <footer className="h-10 font-mono flex max-sm:px-2 md:px-6 items-center text-xs shrink-0 bg-gray-950 shadow-2xl">
