@@ -6,11 +6,10 @@ function App() {
     <div className="flex flex-col h-dvh">
       <Drawer.Root>
         <Drawer.Trigger>
-          test
-          {/*<img
-            src="le-secret/question-mark-icon.png"
+          <img
+            src="/le-secret/question-mark-icon.png"
             className="h-8 w-8 absolute top-2 right-2"
-          />*/}
+          />
         </Drawer.Trigger>
         <Drawer.Portal>
           <Drawer.Overlay className="fixed inset-0 bg-black/40" />
