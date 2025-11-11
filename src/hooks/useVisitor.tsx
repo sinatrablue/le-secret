@@ -50,7 +50,7 @@ export const useVisitor = () => {
           <SpecialContent
             contextText="Tu détiens toi aussi une information cruciale, susceptible d'aider tout le
         groupe."
-            encryptedText="2.117799"
+            encryptedText="2.250576"
             hintText="– Quelqu'un aurait des informations là-bas ?"
           />
         );
@@ -67,7 +67,7 @@ export const useVisitor = () => {
           <SpecialContent
             contextText="Tu détiens une information cruciale, susceptible d'aider tout le
       groupe."
-            encryptedText="50.822910"
+            encryptedText="50.750041"
             hintText="– Es-tu la seule ?"
           />
         );
