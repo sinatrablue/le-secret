@@ -34,7 +34,7 @@ export const TotalTatoosForm: FC<TotalTatoosFormProps> = ({
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     const val = parseInt(data.tatoos);
-    if (val === 25) {
+    if (val === 26) {
       setSuccess(true);
       setIsNextDisabled(false);
       return;
