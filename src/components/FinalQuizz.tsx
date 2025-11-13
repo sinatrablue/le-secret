@@ -1,5 +1,6 @@
 import Stepper, { Step } from "@/components/Stepper";
 import { FavoriteBaeForm } from "@/components/forms/FavoriteBaeForm";
+import { MomsForm } from "@/components/forms/MomsForm";
 import { TotalTatoosForm } from "@/components/forms/TotalTatoosForm";
 import { YearMetForm } from "@/components/forms/YearMetForm";
 import { useState, type FC } from "react";
@@ -28,6 +29,9 @@ export const FinalQuizz: FC<FinalQuizzProps> = ({ setIsQuizzCompleted }) => {
       </Step>
       <Step>
         <TotalTatoosForm setIsNextDisabled={setIsNextDisabled} />
+      </Step>
+      <Step>
+        <MomsForm setIsNextDisabled={setIsNextDisabled} />
       </Step>
     </Stepper>
   );
