@@ -27,7 +27,7 @@ const FormSchema = z.object({
   year: z.string().nonempty({ message: "Tentez votre chance, allez !" }),
 });
 
-const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
+export const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
   const [success, setSuccess] = useState(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -57,7 +57,7 @@ const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
       return;
     }
     form.setError("year", {
-      message: "Le code que vous avez renseigné est invalide",
+      message: "L'année que vous avez renseigné est invalide",
       type: "value",
     });
   }
@@ -104,7 +104,9 @@ const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
                   </SelectTrigger>
                   <SelectContent>
                     {options.map((option) => (
-                      <SelectItem value={option}>{option}</SelectItem>
+                      <SelectItem key={option} value={option}>
+                        {option}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -133,5 +135,3 @@ const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
     </Form>
   );
 };
-
-export default YearMetForm;

@@ -1,5 +1,6 @@
 import Stepper, { Step } from "@/components/Stepper";
-import YearMetForm from "@/components/YearMetForm";
+import { FavoriteBaeForm } from "@/components/forms/FavoriteBaeForm";
+import { YearMetForm } from "@/components/forms/YearMetForm";
 import { useState, type FC } from "react";
 
 type FinalQuizzProps = {
@@ -21,7 +22,10 @@ export const FinalQuizz: FC<FinalQuizzProps> = ({ setIsQuizzCompleted }) => {
       <Step>
         <YearMetForm setIsNextDisabled={setIsNextDisabled} />
       </Step>
-      <Step>step2</Step>
+      <Step>
+        <FavoriteBaeForm setIsNextDisabled={setIsNextDisabled} />
+      </Step>
+      <Step>Step</Step>
     </Stepper>
   );
 };
