@@ -50,7 +50,7 @@ export const MomsForm: FC<MomsFormProps> = ({ setIsNextDisabled }) => {
             <FormItem>
               <FormLabel>Quel est le prénom de la daronne d'Assia ?</FormLabel>
               <FormControl>
-                <Input placeholder="Mireille ?" {...field} />
+                <Input disabled={success} placeholder="Mireille ?" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -63,7 +63,11 @@ export const MomsForm: FC<MomsFormProps> = ({ setIsNextDisabled }) => {
             <FormItem>
               <FormLabel>Quel est le prénom de la daronne de Robin ?</FormLabel>
               <FormControl>
-                <Input placeholder="Catherine ?" {...field} />
+                <Input
+                  disabled={success}
+                  placeholder="Catherine ?"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

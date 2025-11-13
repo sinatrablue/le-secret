@@ -82,6 +82,7 @@ export const FavoriteBaeForm: FC<FavoriteBaeFormProps> = ({
                 </FormLabel>
                 <FormControl>
                   <RadioGroup
+                    disabled={success}
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                     className="flex flex-col"
@@ -92,7 +93,7 @@ export const FavoriteBaeForm: FC<FavoriteBaeFormProps> = ({
                         className="flex items-center gap-3"
                       >
                         <FormControl>
-                          <RadioGroupItem value={option} />
+                          <RadioGroupItem disabled={success} value={option} />
                         </FormControl>
                         <FormLabel>{option}</FormLabel>
                       </FormItem>

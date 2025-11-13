@@ -87,7 +87,7 @@ export const SizesForm: FC<SizesFormProps> = ({ setIsNextDisabled }) => {
             <FormItem>
               <FormLabel>Quelle taille fait-on en cm ? (la même)</FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input disabled={success} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -102,7 +102,7 @@ export const SizesForm: FC<SizesFormProps> = ({ setIsNextDisabled }) => {
                 Quelle pointure fait-on ? (oui, aussi la même)
               </FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input disabled={success} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

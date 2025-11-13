@@ -81,7 +81,7 @@ export const TotalTatoosForm: FC<TotalTatoosFormProps> = ({
                 Combien de tatouages avons-nous à nous deux ?
               </FormLabel>
               <FormControl>
-                <Input placeholder="118" {...field} />
+                <Input placeholder="118" disabled={success} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

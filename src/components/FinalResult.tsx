@@ -30,7 +30,7 @@ export const FinalResult = () => (
           <DecryptedText
             animateOn="view"
             speed={100}
-            maxIterations={20}
+            maxIterations={15}
             text="50.822897"
           />
           <DecryptedText
