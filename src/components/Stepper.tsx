@@ -5,6 +5,7 @@ import React, {
   useLayoutEffect,
   type HTMLAttributes,
   type ReactNode,
+  type JSX,
 } from "react";
 import { motion, AnimatePresence, type Variants } from "motion/react";
 
