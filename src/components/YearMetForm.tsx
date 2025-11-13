@@ -47,12 +47,14 @@ const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
         message: "Et les 7 ans couillon ?",
         type: "value",
       });
+      return;
     }
     if (val < 2015) {
       form.setError("year", {
         message: "Arrêtez, Aéla et Sonia étaient encore en maternelle !",
         type: "value",
       });
+      return;
     }
     form.setError("year", {
       message: "Le code que vous avez renseigné est invalide",
@@ -81,7 +83,7 @@ const YearMetForm: FC<YearMetFormProps> = ({ setIsNextDisabled }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full space-y-6 min-h-fit"
+        className="w-full space-y-10 min-h-fit"
       >
         <FormField
           control={form.control}
