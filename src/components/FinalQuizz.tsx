@@ -15,7 +15,7 @@ export const FinalQuizz: FC<FinalQuizzProps> = ({ setIsQuizzCompleted }) => {
   return (
     <Stepper
       className="min-h-fit"
-      contentClassName="min-h-[200px]"
+      contentClassName="min-h-[300px]"
       backButtonText="Précédent"
       nextButtonText="Suivant"
       onFinalStepCompleted={() => setIsQuizzCompleted(true)}

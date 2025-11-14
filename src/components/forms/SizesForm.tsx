@@ -40,37 +40,41 @@ export const SizesForm: FC<SizesFormProps> = ({ setIsNextDisabled }) => {
       setIsNextDisabled(false);
       return;
     }
-    if (h > 175) {
-      form.setError("height", {
-        message: "Non mais, tu nous a vu en vrai ?",
-        type: "value",
-      });
-    } else if (h < 165) {
-      form.setError("height", {
-        message: "On habite dans un trou de hobbit même ?",
-        type: "value",
-      });
-    } else {
-      form.setError("height", {
-        message: "Presque, encore !",
-        type: "value",
-      });
+    if (h !== 170) {
+      if (h > 175) {
+        form.setError("height", {
+          message: "Non mais, tu nous a vu en vrai ?",
+          type: "value",
+        });
+      } else if (h < 165) {
+        form.setError("height", {
+          message: "On habite dans un trou de hobbit même ?",
+          type: "value",
+        });
+      } else {
+        form.setError("height", {
+          message: "Presque, encore !",
+          type: "value",
+        });
+      }
     }
-    if (s > 42) {
-      form.setError("shoes", {
-        message: "On est des clowns en fait",
-        type: "value",
-      });
-    } else if (h < 37) {
-      form.setError("shoes", {
-        message: "On a terminé notre croissance, si jamais",
-        type: "value",
-      });
-    } else {
-      form.setError("shoes", {
-        message: "Nooon...",
-        type: "value",
-      });
+    if (s !== 39) {
+      if (s > 42) {
+        form.setError("shoes", {
+          message: "On est des clowns en fait",
+          type: "value",
+        });
+      } else if (h < 37) {
+        form.setError("shoes", {
+          message: "On a terminé notre croissance, si jamais",
+          type: "value",
+        });
+      } else {
+        form.setError("shoes", {
+          message: "Nooon...",
+          type: "value",
+        });
+      }
     }
   }
 
